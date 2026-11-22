@@ -1,0 +1,10 @@
+{
+  "module": {
+    "name": "shared_preferences_ohos",
+    "type": "har",
+    "deviceTypes": [
+      "phone",
+      "2in1"
+    ]
+  }
+}

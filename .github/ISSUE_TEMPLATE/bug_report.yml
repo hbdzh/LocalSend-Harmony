@@ -1,0 +1,23 @@
+name: 问题反馈
+description: 报告使用或构建中遇到的问题
+title: "bug: "
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题和复现步骤
+      description: 请说明实际结果和预期结果。
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 设备和构建环境
+      description: 请填写设备型号、系统版本、应用版本；传输问题请说明收发两端。
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: 补充信息
+      description: 可提供不含私人信息的日志或截图。

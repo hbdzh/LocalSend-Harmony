@@ -1,0 +1,35 @@
+.idea
+
+# Pub workspace resolution output
+/.dart_tool/
+
+# Rust workspace build output
+/target/
+
+# Linux AppImage
+/app/AppDir
+/app/appimage-build
+
+.refena_inspector/
+
+/secrets
+
+# FVM Version Cache
+.fvm/
+
+# macOS
+.DS_Store
+
+# Generated at build time by makepri (see support/scripts/compile_windows_msix_helper.ps1)
+/support/build/msix/content/resources.pri
+
+# Local development instructions and skills
+/.agents/
+/AGENTS.md
+/CLAUDE.md
+
+# Upstream distribution assets and packaging scripts
+/fastlane/
+/support/build/
+/support/scripts/*
+!/support/scripts/build_harmony.sh

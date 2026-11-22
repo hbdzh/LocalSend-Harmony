@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 贡献指南
+    url: https://github.com/hbdzh/LocalSend-Harmony/blob/main/CONTRIBUTING.md
+    about: 查看构建方法和反馈建议

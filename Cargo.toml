@@ -1,0 +1,28 @@
+[workspace]
+resolver = "3"
+members = [
+    "cli",
+    "packages/core",
+    "packages/localsend_isolates/rust",
+    "server",
+]
+exclude = ["packages/vendor/webrtc-util"]
+
+[patch.crates-io]
+# webrtc-util only uses nix's socket and interface APIs. Its default nix
+# features include APIs unavailable on OHOS; the vendored copy narrows them.
+webrtc-util = { path = "packages/vendor/webrtc-util" }
+
+# Profiles are only honored in the workspace root manifest.
+
+# Full debuginfo dominates target/ size; line tables keep backtraces usable.
+[profile.dev]
+debug = "line-tables-only"
+
+# RSA key generation is bignum-heavy and takes ~10x longer unoptimized;
+# keep the crypto crates optimized in dev so tests stay fast.
+[profile.dev.package.rsa]
+opt-level = 2
+
+[profile.dev.package.num-bigint-dig]
+opt-level = 2
